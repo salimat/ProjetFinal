@@ -26,14 +26,16 @@
 		<div class="container">
 			<div class="row main">
 				<div class="main-login main-center">
-				<h5>Enregistrer un nouveau patient.</h5>
+				<h1>Enregistrer un nouveau patient.</h1>
 
         <form method="POST" action="{{ route('patients.store') }}">
             @csrf
-<table   cellspacing="50" cellpadding="5">
-	<tr >
-		<td>
+<table   class="tab">
+	
 						<div class="form-group">
+				<tr >
+				<td>
+
 							<label for="nom_per" class="cols-sm-2 control-label">Nom & </label>
                 <label for="prenom_per" class="cols-sm-2 control-label">Prenom</label>
 							<div class="cols-sm-10">
@@ -43,26 +45,12 @@
                   <input type="text" class="form-control" name="prenom_per" id="prenom_per"  placeholder="Entrer Prenom Patient" required  />
 								</div>
 							</div>
-						</div>
+						
 			</td>
 			<td>
 
-            <div class="form-group">
-              <label for="date_naissance" class="cols-sm-2 control-label">Date de Naissance</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-calendar fa" aria-hidden="true"></i></span>
-                  <input type="date" class="form-control" name="date_naissance" id="date_naissance"  placeholder="Entrer date naissance Patient" required  />
-                </div>
-              </div>
-            </div>
-				</td>
-</tr>
-<tr>
-<td>
-            <div class="form-group">
 
-              <label for="sexe_per" class="cols-sm-2 control-label">Sexe</label>
+				<label for="sexe_per" class="cols-sm-2 control-label">Sexe</label>
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-male fa" aria-hidden="true"></i></span>
@@ -73,37 +61,43 @@
                   <label for="sexe_per">Feminin</label>
                 </div>
               </div>
-            </div>
-	</td>
-	<td>
 
-            <div class="form-group">
-              <label for="contact_per" class="cols-sm-2 control-label">Telephone</label>
+           
+              
+              			</td>
+</tr>
+            
+	
+<tr>
+<td>
+           
+            		<label for="contact_per" class="cols-sm-2 control-label">Telephone</label>
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
                   <input type="tel" class="form-control" name="contact_per" id="contact_per"  placeholder="Entrer numero Patient"  />
                 </div>
               </div>
-            </div>
+              
+            
+	</td>
+	<td>
+
+            
+              <label for="date_naissance" class="cols-sm-2 control-label">Date de Naissance</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-calendar fa" aria-hidden="true"></i></span>
+                  <input type="date" class="form-control" name="date_naissance" id="date_naissance"  placeholder="Entrer date naissance Patient" required  />
+                </div>
+              </div>
+            
 		</td>
 	</tr>
 	<tr>
 	<td>
 
-            <div class="form-group">
-              <label for="adresse_per" class="cols-sm-2 control-label">Adresse</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
-                  <input type="adress" class="form-control" name="adresse_per" id="adresse_per"  placeholder="Entrer Adresse Patient" required />
-                </div>
-              </div>
-            </div>
-				</td>
-				<td>
-
-						<div class="form-group">
+            
 							<label for="email_per" class="cols-sm-2 control-label">Adresse Email</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
@@ -111,12 +105,27 @@
 									<input type="email" class="form-control" name="email_per" id="email_per"  placeholder="Enter  Email"  />
 								</div>
 							</div>
-						</div>
+						
+				</td>
+
+				<td>
+
+				
+		              <label for="adresse_per" class="cols-sm-2 control-label">Adresse</label>
+		              <div class="cols-sm-10">
+		                <div class="input-group">
+		                  <span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+		                  <input type="adress" class="form-control" name="adresse_per" id="adresse_per"  placeholder="Entrer Adresse Patient" required />
+		                </div>
+		              </div>
+            
+
+						
 					</td>
 				</tr>
 	<tr>
 		<td>
-					<div class="form-group">
+					
 							<label for="profession_pat" class="cols-sm-2 control-label">Profession</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
@@ -124,10 +133,10 @@
 									<input type="text" class="form-control" name="profession_pat" id="profession_pat"  placeholder="Entrer Profession" required />
 								</div>
 							</div>
-						</div>
+						
 			</td>
 			<td>
-						<div class="form-group">
+						
 							<label for="code_postal_pat" class="cols-sm-2 control-label">code postal</label>
 							<div class="cols-sm-10">
 								<div class="input-group">

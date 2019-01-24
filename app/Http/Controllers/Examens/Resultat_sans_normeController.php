@@ -15,6 +15,10 @@ class Resultat_sans_normeController extends Controller
     public function index()
     {
         //
+        $examens=Examen::all();
+
+        return view('Resultat_sans_normes/index',compact('examens'));
+
     }
 
     /**

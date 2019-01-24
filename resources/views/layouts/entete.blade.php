@@ -70,7 +70,29 @@
 <br>
 <br>
 <!-- Fin de la ligne !-->
-<div> @yield('content')<div>
-  <footer>
-        <p>© 2018<a style="color:#0a93a6; text-decoration:none;" href="#"> KENEYALAB</a>, All rights reserved 2018-2019.</p>
-  </footer>
+<div>@yield('content')</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+  
+      <p>© 2018<a style="color:#0a93a6; text-decoration:none;" href="#"> KENEYALAB</a>, All rights reserved 2018-2019.</p>
+</footer>
+
+

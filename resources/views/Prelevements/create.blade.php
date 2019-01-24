@@ -17,13 +17,13 @@
 
 		</div>
 
-    <button class="btn btn-default pull-right" type="button" style="margin-top:20px;" data-toggle="modal" data-target= "#item_add" onclick="location.href='/prelevements/{prelevement}/edit'" >
-      <i class="glyphicon glyphicon-check"></i> Valider</button>
+    
 
 <form class="" action="{{ route('addcodeBarre',$patients->id) }}" method="post">
 	@csrf
-	<input type="submit" name="" value="envoyer">
-
+	
+<button class="btn btn-default pull-right"  style="margin-top:20px;"  onclick="confirm('Valider le prelevement du Patient {{$patients->nom_per. ' ' .$patients->prenom_per}} ')">
+      <i class="glyphicon glyphicon-check"> </i> <input type="submit"  value="Valider"></button>
 
 <div class="container">
     <div class="row">

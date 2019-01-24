@@ -36,10 +36,8 @@
 	</li>
   <li class="drpdown"><a href="#"><i class="fa fa-file-o "></i><span>RESULTAT</span></a>
 		<ul class="drpcontent" id="themeselect">
-			<li><a href="{{url('resultatSansNormes/create')}}" >Resultat sans norme</a>  </li>
-			<li><a href="#" >Resultat norme simple</a></li>
-			<li><a href="#" >Resultat norme calculées </a></li>
-			<li><a href="#" >Resultat Multi-colonne</a></li>
+			<li><a href="{{url('patient/indexPatientResultat')}}" >Entrer un Resultat</a>  </li>
+			<li><a href="#" >Consulter un resultat</a></li>
 
 		</ul>
 	</li>

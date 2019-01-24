@@ -1,4 +1,4 @@
-@extends('layouts.secretariatnav')
+@extends('layouts.tbmnav')
 
 @section('content')
 
@@ -49,19 +49,19 @@
 
                    </thead>
     <tbody>
-
+@foreach ($patient as $emp)
     <tr>
-    <td><input type="checkbox" class="checkthis" name="identifiant{{$patients->id}}" value="{{$patients->id}}"/> </td>
+    <td><input type="checkbox" class="checkthis" name="identifiant{{$emp->id}}" value="{{$emp->id}}"/> </td>
 
     <!-- <td> {{ $patients->id}}</td> -->
-    <td> {{ $patients->nom_per }}</td>
-    <td> {{ $patients->prenom_per }}</td>
-    <td> {{ $patients->sexe_per }}</td>
-    <td> {{ $patients->contact_per }}</td>
-    <td> {{ $patients->adresse_per }}</td>
+    <td> {{ $emp->nom_per }}</td>
+    <td> {{ $emp->prenom_per }}</td>
+    <td> {{ $emp->sexe_per }}</td>
+    <td> {{ $emp->contact_per }}</td>
+    <td> {{ $emp->adresse_per }}</td>
     </tr>
 
-
+ @endforeach
 
 
 

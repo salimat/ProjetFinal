@@ -11,9 +11,7 @@
 */
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 //Auth::routes();
 
@@ -50,11 +48,17 @@ Route::resources([
     'codes'=>'Patients\CodeController',
     'infoExamen'=> 'Patients\Info_examenController',
 ]);
+
+Route::get('/', function () {
+    return view('Acceuil.acceuil');
+});
 /*Route::get('/patients/rechercher', 'Patients\PatientController@indexRechercherPatient()');
 Route::get('/patients/prelevement', 'Patients\PatientController@listePrelevement()');*/
 Route::post('/patient/{idPatient}/addPrestation','Patients\Prestation_faiteController@addPrestation')->name('addPrestation');
 Route::post('/patient/{idPatient}/addFacture','Patients\Prestation_faiteController@addFacture')->name('addFacture');
 Route::get('/patient/indexPatientJour','Patients\PatientController@indexPatientJour')->name('indexPatientJour');
+Route::get('/patient/indexPatientResultat','Patients\PatientController@indexPatientResultat')->name('indexPatientResultat');
+Route::post('/patient/{idPatient}/addResultat','Patients\PatientController@addResultat')->name('addResultat');
 Route::post('/patient/{idPatient}/addPrelevement','Patients\PrelevementController@addPrelevement')->name('addPrelevement');
 Route::post('/patient/{idPatient}/addcodeBarre','Patients\CodeController@addcodeBarre')->name('addcodeBarre');
 //Route::post('/patient/addcodeBarre','Patients\CodeController@addPatient')->name('addcodeBarre');

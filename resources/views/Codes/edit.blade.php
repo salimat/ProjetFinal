@@ -1,4 +1,4 @@
-@extends('layouts.secretariatnav')
+@extends('layouts.tbmnav')
 
 @section('content')
 <script language="javascript" type="text/javascript">
@@ -30,5 +30,5 @@ $jour = substr($today,8,2);
 <div id="divID">
   <h1>  <?php echo 'CM'.$annees.$mois.$jour.$patients->id; ?></h1>
 </div>
-<input name="b_print" type="button" onclick="printdiv('divID');" value=" Print " />
+<input name="b_print" type="button" onclick="printdiv('divID');" value=" Imprimer " />
 @endsection

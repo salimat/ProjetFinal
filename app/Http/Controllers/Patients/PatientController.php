@@ -132,9 +132,45 @@ return $patients->examens;
       }
       //$patients=Patient::find($list);
       $patients = Patient::orderBy('id', 'desc')->first();
-    //$patients = Patient::orderBy('id', 'desc')->take(5)->get();
+    $patient = Patient::orderBy('id', 'desc')->take(5)->get();
 
   //  $patients=Patient::all();
-      return view('Prelevements.index')->with(['patients'=>$patients]);
+      return view('Prelevements.index')->with(['patients'=>$patients,
+    'patient'=>$patient]);
+    }
+
+
+    public function indexPatientResultat(Request $request)
+    {
+      $list = array();
+      for($i=0; $i<=count(Patient::all()); $i++){
+      //var_dump($identifiant=$request->input('identifiant'.$i));
+      if($request->input('identifiant'.$i))
+      {
+          array_push($list ,$i);
+          //$examens=Examen::find([$i]);
+      }
+      }
+      //$patients=Patient::find($list);
+      $patients = Patient::orderBy('id', 'desc')->first();
+    //$patient = Patient::orderBy('id', 'desc')->take(3)->get();
+      $patient = Patient::all();
+    $examens=Examen::all();
+
+  //  $patients=Patient::all();
+      return view('Resultats.index')->with(['patients'=>$patients,
+    'patient'=>$patient,
+    'examens'=>$examens]);
+    }
+    public function addResultat(Request $request)
+    {
+      
+      $patients = Patient::orderBy('id', 'desc')->first();
+    
+    $examens=Examen::all();
+
+  //  $patients=Patient::all();
+      return view('Resultats.create')->with(['patients'=>$patients,
+    'examens'=>$examens]);
     }
 }

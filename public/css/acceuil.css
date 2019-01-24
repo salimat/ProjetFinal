@@ -1,0 +1,12 @@
+/*Now the styles*/
+* {
+    margin: 0; 
+	padding: 0;
+}
+body {
+	/*background: #ccc; */
+	background-image: url("/css/acceuil/LABM.jpg");
+  background-repeat: no-repeat;
+	font-family: arial, verdana, tahoma;
+}
+
