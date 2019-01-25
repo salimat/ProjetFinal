@@ -59,7 +59,7 @@
     <td> {{ $patients->sexe_per }}</td>
     <td> {{ $patients->contact_per }}</td>
     <td> {{ $patients->adresse_per }}</td>
-    <td> {{ $examens[1]->nom_examen }}</td>
+    <td> {{ $examens[0]->nom_examen }}</td>
     </tr>
     <tr>
     <td><input type="checkbox" class="checkthis" name="identifiant{{$patients->id}}" value="{{$patients->id}}"/> </td>
@@ -68,17 +68,9 @@
     <td> {{ $patient[2]->sexe_per }}</td>
     <td> {{ $patient[2]->contact_per }}</td>
     <td> {{ $patient[2]->adresse_per }}</td>
-    <td> {{ $examens[2]->nom_examen }}</td>
+    <td> {{ $examens[1]->nom_examen }}</td>
     </tr>
-    <tr>
-    <td><input type="checkbox" class="checkthis" name="identifiant{{$patients->id}}" value="{{$patients->id}}"/> </td>
-    <td> {{ $patient[4]->nom_per }}</td>
-    <td> {{ $patient[4]->prenom_per }}</td>
-    <td> {{ $patient[4]->sexe_per }}</td>
-    <td> {{ $patient[4]->contact_per }}</td>
-    <td> {{ $patient[4]->adresse_per }}</td>
-    <td> {{ $examens[3]->nom_examen }}</td>
-    </tr>
+  
 
  
 

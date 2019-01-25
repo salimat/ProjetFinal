@@ -132,7 +132,7 @@ return $patients->examens;
       }
       //$patients=Patient::find($list);
       $patients = Patient::orderBy('id', 'desc')->first();
-    $patient = Patient::orderBy('id', 'desc')->take(5)->get();
+    $patient = Patient::orderBy('id', 'desc')->take(3)->get();
 
   //  $patients=Patient::all();
       return view('Prelevements.index')->with(['patients'=>$patients,

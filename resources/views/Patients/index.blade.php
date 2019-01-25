@@ -41,6 +41,7 @@
                  <th>SEXE</th>
                    <th>CONTACT </th>
                    <th>ADRESSE</th>
+                   <th>DATE DE NAISSANCE</th>
                     <th>Edit</th>
 										<th>Delete</th>
 										<th>Ajouter Prestation</th>
@@ -55,6 +56,7 @@
     <td> {{ $emp->sexe_per }}</td>
     <td> {{ $emp->contact_per }}</td>
     <td> {{ $emp->adresse_per }}</td>
+     <td> {{ $emp->date_naissance }}</td>
 
     <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" onclick="location.href='patients/{{$emp->id}}/edit'" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
     <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" onclick="location.href='patients/{{$emp->id}}'" ><span class="glyphicon glyphicon-trash"></span></button></p></td>

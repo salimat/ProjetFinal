@@ -46,6 +46,7 @@
                  <th>SEXE</th>
                    <th>CONTACT </th>
                    <th>ADRESSE</th>
+                   <th>DATE DE NAISSANCE</th>
 
                    </thead>
     <tbody>
@@ -59,6 +60,7 @@
     <td> {{ $emp->sexe_per }}</td>
     <td> {{ $emp->contact_per }}</td>
     <td> {{ $emp->adresse_per }}</td>
+    <td> {{ $emp->date_naissance }}</td>
     </tr>
 
  @endforeach
