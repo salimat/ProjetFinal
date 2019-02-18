@@ -114,7 +114,7 @@
 
 <body>
   <input name="b_print" type="button" onclick="printdiv('divID');" value=" Imprimer " />
-  <p><a href="{{ url('/acceuilSecretariat/create ') }}">Retour</a></p>
+  <a href="{{ url('/acceuilSecretariat/create ') }}">Retour</a>
   <div id="divID">
 
     <div class="invoice-box">
@@ -131,12 +131,13 @@
                               date_default_timezone_set($timezone);
                               $today = date("Y-m-d");
                               $annees = substr($today,2,2);
+                              $jour = substr($today,8,2);
 
                               $mois = substr($today,5,2);
                             ?>
                             <td>
                               <h3><strong>Facture</strong></h3>
-                                <h4>Réf. : <?php echo 'FA'.$annees.$mois;?>-00050</h4>
+                                <h4>Réf. : <?php echo 'FA'.$annees.$mois. $jour;?>-0025</h4>
                                 <?php
                                   $timezone = "Europe/London";
                                   date_default_timezone_set($timezone);
